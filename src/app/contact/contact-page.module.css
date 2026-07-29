@@ -1,0 +1,35 @@
+/* ─── Contact Page ─────────────────────────────────────── */
+.page { min-height: 100vh; background: var(--bg-base); }
+
+/* Header */
+.header { text-align: center; margin-bottom: 40px; }
+
+.sectionLabel { display: inline-flex; align-items: center; gap:8px; font-family: var(--font-mono); font-size:0.75rem; font-weight:700; letter-spacing:3px; text-transform:uppercase; color:var(--cyan); padding:6px 16px; background:rgba(0,212,255,0.08); border:1px solid rgba(0,212,255,0.2); border-radius:100px; margin-bottom:16px; }
+
+.sectionTitle { font-size: clamp(1.8rem,3.5vw,2.6rem); font-weight:800; line-height:1.15; color:var(--text-primary); margin-bottom:12px; }
+
+.sectionDesc { font-size:1.05rem; color:var(--text-secondary); max-width:560px; margin:0 auto; line-height:1.7; }
+
+.layout { display:flex; gap:48px; flex-wrap:wrap; justify-content:center; }
+.infoCol { flex:1 1 320px; display:grid; gap:24px; }
+.card { display:flex; gap:16px; align-items:flex-start; padding:24px; background:var(--bg-card); border:1px solid var(--border); border-radius:var(--radius-md); transition:var(--transition); }
+.card:hover { border-color:rgba(0,212,255,0.3); transform:translateX(6px); }
+.iconWrap { width:48px; height:48px; display:flex; align-items:center; justify-content:center; border-radius:12px; background:rgba(0,212,255,0.08); color:var(--cyan); border:1px solid rgba(0,212,255,0.2); }
+.cardTitle { font-size:1.1rem; font-weight:700; color:var(--text-primary); margin-bottom:4px; }
+.cardDesc { font-size:0.9rem; color:var(--text-muted); line-height:1.6; }
+
+.formCol { flex:1 1 320px; }
+.form { display:grid; gap:20px; }
+.inputGroup { display:flex; flex-direction:column; }
+.input { padding:12px 16px; border:1px solid var(--border); border-radius:var(--radius-sm); background:var(--bg-surface); color:var(--text-primary); font-size:1rem; }
+.textarea { min-height:140px; resize:vertical; }
+.submitBtn { align-self:flex-start; padding:12px 24px; background:var(--gold); color:#fff; font-weight:600; border:none; border-radius:var(--radius-sm); cursor:pointer; transition:var(--transition); }
+.submitBtn:hover { background:var(--gold-dark); }
+
+/* Orbs */
+.orb1, .orb2 { position:absolute; border-radius:50%; filter:blur(80px); pointer-events:none; }
+.orb1 { width:500px; height:500px; top:-200px; left:-200px; background:radial-gradient(circle, rgba(245,166,35,0.07) 0%, transparent 70%); }
+.orb2 { width:400px; height:400px; bottom:-150px; right:-150px; background:radial-gradient(circle, rgba(0,212,255,0.07) 0%, transparent 70%); }
+
+@media (max-width:1024px){ .layout { flex-direction:column; gap:32px; } }
+@media (max-width:640px){ .header{padding:0 20px;} }

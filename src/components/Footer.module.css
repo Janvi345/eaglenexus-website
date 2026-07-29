@@ -1,0 +1,239 @@
+.footer {
+  background: var(--bg-base);
+  border-top: 1px solid var(--border);
+}
+
+/* CTA Banner */
+.ctaBanner {
+  background: linear-gradient(135deg, rgba(245,166,35,0.08) 0%, rgba(245,166,35,0.02) 100%);
+  border-bottom: 1px solid var(--border);
+  padding: 64px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.ctaBanner::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+}
+
+.bannerInner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+.bannerTitle {
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+
+.gold {
+  background: linear-gradient(135deg, var(--gold), var(--gold-light));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.bannerDesc {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  max-width: 440px;
+}
+
+.bannerCtas {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-shrink: 0;
+  flex-wrap: wrap;
+}
+
+/* Main Footer */
+.main { padding: 72px 0 48px; }
+
+.grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 48px;
+}
+
+/* Brand */
+.brand { display: flex; flex-direction: column; gap: 20px; }
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logoImg {
+  width: 60px; height: 60px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 12px rgba(245,166,35,0.4));
+}
+
+.logoName {
+  font-size: 1.3rem;
+  font-weight: 900;
+  letter-spacing: 0.5px;
+  background: linear-gradient(180deg, #FFF0C2 0%, #F5A623 50%, #8C5400 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.logoNexus {
+  font-size: 0.55em;
+  font-family: var(--font-mono);
+  letter-spacing: 3px;
+  color: var(--gold);
+  vertical-align: middle;
+  margin-left: 4px;
+}
+
+.logoTagline {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  letter-spacing: 2px;
+}
+
+.brandDesc {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  line-height: 1.75;
+  max-width: 300px;
+}
+
+.socials {
+  display: flex;
+  gap: 8px;
+}
+
+.socialLink {
+  width: 38px; height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  color: var(--text-muted);
+  transition: var(--transition);
+}
+
+.socialLink:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+  background: rgba(245,166,35,0.08);
+}
+
+/* Link Groups */
+.linkGroup { display: flex; flex-direction: column; gap: 16px; }
+
+.groupTitle {
+  font-size: 0.78rem;
+  font-weight: 700;
+  font-family: var(--font-mono);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.linkList { display: flex; flex-direction: column; gap: 10px; }
+
+.footerLink {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  transition: var(--transition);
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.footerLink:hover {
+  color: var(--text-primary);
+  padding-left: 4px;
+}
+
+/* Bottom Bar */
+.bottom {
+  border-top: 1px solid var(--border);
+  padding: 20px 0;
+}
+
+.bottomInner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.copyright {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+
+.certBadges {
+  display: flex;
+  gap: 8px;
+}
+
+.certBadge {
+  padding: 4px 12px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  font-family: var(--font-mono);
+  letter-spacing: 1px;
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  color: var(--text-muted);
+}
+
+.backTop {
+  width: 36px; height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  color: var(--text-muted);
+  transition: var(--transition);
+}
+
+.backTop:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+  background: rgba(245,166,35,0.08);
+}
+
+@media (max-width: 1024px) {
+  .grid { grid-template-columns: 1fr 1fr; }
+  .brand { grid-column: span 2; }
+}
+
+@media (max-width: 640px) {
+  .ctaBanner { padding: 40px 0; }
+  .main { padding: 48px 0 32px; }
+  .grid { grid-template-columns: 1fr; gap: 32px; }
+  .brand { grid-column: span 1; max-width: 100%; }
+  .brandDesc { max-width: 100%; }
+  .logoImg { width: 48px; height: 48px; }
+  .bannerInner { flex-direction: column; text-align: center; align-items: center; }
+  .bannerCtas { justify-content: center; flex-direction: column; width: 100%; }
+  .bannerCtas a, .bannerCtas button { width: 100%; justify-content: center; text-align: center; }
+  .bottomInner { flex-direction: column; text-align: center; gap: 12px; }
+  .certBadges { justify-content: center; flex-wrap: wrap; }
+  .copyright { font-size: 0.76rem; }
+  .groupTitle { font-size: 0.72rem; }
+  .footerLink { font-size: 0.82rem; }
+}
+

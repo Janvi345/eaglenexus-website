@@ -1,0 +1,248 @@
+.courses {
+  background: var(--bg-base);
+  position: relative;
+  overflow: hidden;
+}
+
+.orb1 {
+  position: absolute;
+  width: 500px; height: 500px;
+  right: -150px; top: -100px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(245,166,35,0.07) 0%, transparent 70%);
+  filter: blur(80px);
+  pointer-events: none;
+}
+
+.orb2 {
+  position: absolute;
+  width: 400px; height: 400px;
+  left: -100px; bottom: 0;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(0,212,255,0.05) 0%, transparent 70%);
+  filter: blur(80px);
+  pointer-events: none;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 48px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header .section-title {
+  text-align: center;
+}
+
+.header .section-desc {
+  margin: 16px auto 0;
+  text-align: center;
+  max-width: 640px;
+}
+
+/* Filter Pills */
+.filters {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 48px;
+}
+
+.filterBtn {
+  padding: 9px 22px;
+  border-radius: 100px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  border: 1px solid var(--border);
+  background: transparent;
+  transition: var(--transition);
+  font-family: var(--font-sans);
+}
+
+.filterBtn:hover {
+  color: var(--text-primary);
+  border-color: rgba(245,166,35,0.3);
+  background: rgba(245,166,35,0.05);
+}
+
+.filterBtn.active {
+  background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+  color: #0A0500;
+  border-color: transparent;
+  box-shadow: 0 4px 16px rgba(245,166,35,0.35);
+}
+
+/* Grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+/* Card */
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 28px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: var(--transition);
+}
+
+.card:hover { transform: translateY(-6px); }
+
+.accent_gold:hover,
+.accent_cyan:hover,
+.accent_magenta:hover { border-color: rgba(245,166,35,0.35); box-shadow: 0 12px 40px rgba(245,166,35,0.12); }
+
+/* Card Header */
+.cardHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cardMeta { display: flex; gap: 6px; flex-wrap: wrap; }
+
+/* Badge */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 10px;
+  border-radius: 100px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  font-family: var(--font-mono);
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.badge_gold,
+.badge_cyan,
+.badge_magenta { background: rgba(245,166,35,0.15); color: var(--gold); border: 1px solid rgba(245,166,35,0.3); }
+
+.cardTitle {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.4;
+}
+
+.cardDesc {
+  font-size: 0.87rem;
+  color: var(--text-muted);
+  line-height: 1.65;
+  flex: 1;
+}
+
+/* Info Row */
+.infoRow {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 12px 0;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.infoItem {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+}
+
+.ratingItem {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--gold);
+  font-family: var(--font-mono);
+  margin-left: auto;
+}
+
+/* Card Footer */
+.cardFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: auto;
+}
+
+.pricing { display: flex; align-items: baseline; gap: 8px; }
+
+.price {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  font-family: var(--font-mono);
+}
+
+.oldPrice {
+  font-size: 0.85rem;
+  color: var(--text-faint);
+  text-decoration: line-through;
+}
+
+.enrollBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 20px;
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  transition: var(--transition);
+  font-family: var(--font-sans);
+}
+
+.card:hover .enrollBtn {
+  background: var(--gold);
+  border-color: var(--gold);
+  color: #0A0500;
+}
+
+/* Glow Line */
+.glowLine {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 2px;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+}
+
+.card:hover .glowLine { opacity: 1; }
+
+/* Bottom CTA */
+.bottomCta {
+  display: flex;
+  justify-content: center;
+  margin-top: 56px;
+}
+
+@media (max-width: 1024px) {
+  .grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 640px) {
+  .grid { grid-template-columns: 1fr; }
+}
